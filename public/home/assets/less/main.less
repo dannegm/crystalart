@@ -1,0 +1,149 @@
+@font-face {
+	font-family: 'Nyala';
+	src: url('../fonts/nyala.eot');
+	src: url('../fonts/nyala.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nyala.woff') format('woff'),
+		url('../fonts/nyala.ttf') format('truetype'),
+		url('../fonts/nyala.svg#31f640f54fa4dabcf0fddfc338ecf1c4') format('svg');
+
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/Myriad_Pro_Regular.eot');
+	src: url('../fonts/Myriad_Pro_Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Myriad_Pro_Regular.woff') format('woff'),
+		url('../fonts/Myriad_Pro_Regular.ttf') format('truetype'),
+		url('../fonts/Myriad_Pro_Regular.svg#b6b933d6eeb92d33db4fad36c45b0bff') format('svg');
+	   
+	font-style:   normal;
+	font-weight:  400;
+}
+
+
+
+// Vars
+
+// Fonts
+
+@font-general: 'Nyala';
+@font-headers: 'Myriad Pro';
+
+// Colors
+
+@color-white: #ffffff;
+@color-black: #000000;
+
+@color-primary-dark: #2a2f34;
+
+// Auxiliars
+
+html, body {
+	font-family: @font-general;
+	margin-top: 48px;
+}
+
+#main {
+	background: pink;
+}
+
+.border-b-white {
+	border-bottom: 2px solid @color-white;
+}
+.remove-margins {
+	margin: 0;
+}
+.remove-paddings {
+	margin: 0;
+}
+.bg-white {
+	background: @color-white;
+}
+.text-primary {
+	color: @color-primary-dark;
+}
+.w24 {
+	width: 24px;
+}
+.w32 {
+	width: 32px;
+}
+.w48 {
+	width: 48px;
+}
+
+// Template
+
+#navbar {
+	background: @color-white;
+	height: 96px;
+
+	#logo {
+		height: 64px;
+	}
+
+	.navbar-nav {
+		margin-top: 24px;
+
+		li {
+			font-size: 1.4em;
+			a {
+				color: @color-black;
+			}
+		}
+	}
+}
+
+#footer {
+	background: @color-primary-dark url('../../img/img-rootframe.png') right center no-repeat;
+	background-size: auto 80%;
+	color: @color-white;
+	font-family: @font-headers;
+
+	.hr {
+		border: 0;
+		height: 0;
+		border-bottom: 2px solid @color-white;
+		margin: 1em;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	a {
+		color: @color-white;
+		text-decoration: underline;
+	}
+	.link-center {
+		display: block;
+		text-align: center;
+		margin-top: 1em;
+
+		img {
+			height: 2.4em;
+		}
+
+		span {
+			display: block;
+			text-align: center;
+			font-size: 1.2em;
+		}
+	}
+
+	.decor {
+		img {
+			margin-left: 2em;
+		}
+	}
+}
+
+
+// Slider
+
+
+
+
+
