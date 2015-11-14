@@ -94,6 +94,9 @@ html, body {
 			}
 		}
 	}
+	.navbar-collapse {
+		background: @color-white;
+	}
 }
 
 #footer {
@@ -140,8 +143,30 @@ html, body {
 	}
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
 
-// Slider
+}
+
+@media (max-width: 768px) {
+	html, body {
+		margin-top: 24px;
+	}
+	#navbar {
+		background: @color-white;
+		height: 42px;
+
+		#logo {
+			height: 32px;
+			margin-top: -8px;
+		}
+	}
+
+	#footer {
+		background-image: none;
+	}
+
+}
+
 
 
 

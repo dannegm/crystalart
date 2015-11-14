@@ -74,22 +74,23 @@
 			<div class="row">
 				<div class="col-lg-9">
 					<div class="row">
-						<div class="col-lg-6">
+						<div class="col-lg-6 col-xs-12">
 							<h1>get in touch!</h1>
 						</div>
-						<div class="col-lg-3">
+						<div class="col-lg-3 col-xs-6">
 							<a class="link-center" href="#">
 								<img src="{{URL::asset('/home/img/ic-arts.png')}}" />
 								<span>Artist submission</span>
 							</a>
 						</div>
-						<div class="col-lg-3">
+						<div class="col-lg-3 col-xs-6">
 							<a class="link-center" href="#">
 								<img src="{{URL::asset('/home/img/ic-carrers.png')}}" />
 								<span>Carrer Oportunity</span>
 							</a>
 						</div>
-						<div class="col-lg-12 hr"></div>
+
+						<div class="col-lg-12 col-xs-10 hr"></div>
 					</div>
 					<div class="row">
 						<div class="col-lg-4">
@@ -112,6 +113,7 @@
 							<h2>Our social scene</h2>
 							<a href="{{Settings::get('social.facebook')}}"><i class="fa fa-facebook-square fa-2x"></i></a>
 							<a href="{{Settings::get('social.linkedin')}}"><i class="fa fa-linkedin-square fa-2x"></i></a>
+							<p></p>
 						</div>
 					</div>
 				</div>

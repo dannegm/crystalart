@@ -25,6 +25,9 @@
 @stop
 
 @section('scripts')
+	<script src="{{URL::asset('/home/assets/js/greensock/TweenMax.min.js')}}"></script>
+	<script src="{{URL::asset('/home/assets/js/jquery.superscrollorama.js')}}"></script>
+
 	<script src="{{URL::asset('/home/assets/js/plugins/FullscreenSlitSlider/js/modernizr.custom.79639.js')}}"></script>
 	<script src="{{URL::asset('/home/assets/js/plugins/FullscreenSlitSlider/js/jquery.ba-cond.min.js')}}"></script>
 	<script src="{{URL::asset('/home/assets/js/plugins/FullscreenSlitSlider/js/jquery.slitslider.js')}}"></script>
