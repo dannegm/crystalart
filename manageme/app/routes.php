@@ -22,7 +22,7 @@ Route::get('/', array('as' => 'app.index', 'uses' => 'AppController@index'));
 /*
 Public
 /**/
-Route::get('profile', array('as' => 'page.home', 'uses' => 'IndexController@index'));
+Route::get('home', array('as' => 'page.home', 'uses' => 'IndexController@index'));
 Route::get('note/{uid}', array('as' => 'page.note', 'uses' => 'IndexController@note'));
 Route::get('page/{uid}', array('as' => 'page.page', 'uses' => 'IndexController@page'));
 

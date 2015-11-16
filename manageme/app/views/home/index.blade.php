@@ -3,7 +3,7 @@
 @section('metas')
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="{{Settings::get('page.title')}}" />
-<meta property="og:image" content="{{URL::asset('/home/img/ca-logo.png')}}" />
+<meta property="og:image" content="{{URL::asset('/img/ca-logo.png')}}" />
 
 <meta property="og:url" content="{{route('page.home')}}" />
 <meta property="og:title" content="{{Settings::get('page.title')}}" />
@@ -25,12 +25,15 @@
 @stop
 
 @section('scripts')
-	<script src="{{URL::asset('/home/assets/js/greensock/TweenMax.min.js')}}"></script>
-	<script src="{{URL::asset('/home/assets/js/jquery.superscrollorama.js')}}"></script>
+	<script src="{{URL::asset('/assets/js/skrollr.js')}}"></script>
 
-	<script src="{{URL::asset('/home/assets/js/plugins/FullscreenSlitSlider/js/modernizr.custom.79639.js')}}"></script>
-	<script src="{{URL::asset('/home/assets/js/plugins/FullscreenSlitSlider/js/jquery.ba-cond.min.js')}}"></script>
-	<script src="{{URL::asset('/home/assets/js/plugins/FullscreenSlitSlider/js/jquery.slitslider.js')}}"></script>
+	<script src="{{URL::asset('/assets/js/plugins/FullscreenSlitSlider/js/modernizr.custom.79639.js')}}"></script>
+	<script src="{{URL::asset('/assets/js/plugins/FullscreenSlitSlider/js/jquery.ba-cond.min.js')}}"></script>
+	<script src="{{URL::asset('/assets/js/plugins/FullscreenSlitSlider/js/jquery.slitslider.js')}}"></script>
+
+	<script>
+	var s = skrollr.init();
+	</script>
 
 	<script id="script_slider">
 		{{Fragment::get('home.slider')->js}}

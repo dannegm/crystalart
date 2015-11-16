@@ -16,10 +16,10 @@
 
 	<!-- Stylesheets -->
 
-	<link rel="stylesheet" href="{{URL::asset('/home/assets/less/main.less')}}" />
-	<link rel="stylesheet" href="{{URL::asset('/home/assets/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{URL::asset('/home/assets/css/font-awesome.min.css')}}">
-	<link rel="stylesheet/less" href="{{URL::asset('/home/assets/less/main.less')}}" />
+	<link rel="stylesheet" href="{{URL::asset('/assets/less/main.less')}}" />
+	<link rel="stylesheet" href="{{URL::asset('/assets/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{URL::asset('/assets/css/font-awesome.min.css')}}">
+	<link rel="stylesheet/less" href="{{URL::asset('/assets/less/main.less')}}" />
 	@section('styles')
 	@show
 
@@ -42,15 +42,15 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">
-					<img id="logo" src="{{URL::asset('/home/img/ca-logo.png')}}"
+				<a class="navbar-brand" href="{{route('page.home')}}">
+					<img id="logo" src="{{URL::asset('/img/ca-logo.png')}}"
 						alt="{{Settings::get('page.title')}}" />
 				</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Home</a></li>
+					<li><a href="{{route('page.home')}}">Home</a></li>
 					<li><a href="#">About us</a></li>
 					<li><a href="#">Brands</a></li>
 					<li><a href="#">Products</a></li>
@@ -79,13 +79,13 @@
 						</div>
 						<div class="col-lg-3 col-xs-6">
 							<a class="link-center" href="#">
-								<img src="{{URL::asset('/home/img/ic-arts.png')}}" />
+								<img src="{{URL::asset('/img/ic-arts.png')}}" />
 								<span>Artist submission</span>
 							</a>
 						</div>
 						<div class="col-lg-3 col-xs-6">
 							<a class="link-center" href="#">
-								<img src="{{URL::asset('/home/img/ic-carrers.png')}}" />
+								<img src="{{URL::asset('/img/ic-carrers.png')}}" />
 								<span>Carrer Oportunity</span>
 							</a>
 						</div>
@@ -123,9 +123,9 @@
 
 
 	<!-- Scripts -->
-	<script src="{{URL::asset('/home/assets/js/jquery.min.js')}}"></script>
-	<script src="{{URL::asset('/home/assets/js/less.min.js')}}"></script>
-	<script src="{{URL::asset('/home/assets/js/bootstrap.min.js')}}"></script>
+	<script src="{{URL::asset('/assets/js/jquery.min.js')}}"></script>
+	<script src="{{URL::asset('/assets/js/less.min.js')}}"></script>
+	<script src="{{URL::asset('/assets/js/bootstrap.min.js')}}"></script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -3,7 +3,7 @@
 @section('metas')
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="{{Settings::get('page.title')}}" />
-	<meta property="og:image" content="{{URL::asset('/home/img/logo.png')}}" />
+	<meta property="og:image" content="{{URL::asset('/img/logo.png')}}" />
 
 	<meta property="og:url" content="{{route('page.home')}}" />
 	<meta property="og:title" content="{{Settings::get('page.title')}}" />
