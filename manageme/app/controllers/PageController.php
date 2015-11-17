@@ -16,7 +16,12 @@ class PageController extends \BaseController {
 		$pages = Page::where('uid', '=', $uid)->take(1)->get();
 		$page = $pages[0];
 
-				// Encontrando fragmentos
+		$page->content = str_replace('inputarea', 'textarea', $page->content);
+		$page->content = str_replace('%asset%', URL::asset('/'), $page->content);
+		$page->css = str_replace('%asset%', URL::asset('/'), $page->css);
+		$page->js = str_replace('%asset%', URL::asset('/'), $page->js);
+
+		// Encontrando fragmentos
 
 		$patterns = '/%fragment\((?P<uid>.*)\)%|%route\((?P<route>.*)\)%/';
 		$output = (object) array (
@@ -78,6 +83,13 @@ class PageController extends \BaseController {
 		/**/
 
 		// END
+
+		$settings = Settings::orderBy('id', 'desc')->get();
+		foreach ($settings as $item) {
+			$page->content = str_replace('%' . $item->key . '%', $item->value, $page->content);
+			$page->css = str_replace('%' . $item->key . '%', $item->value, $page->css);
+			$page->js = str_replace('%' . $item->key . '%', $item->value, $page->js);
+		}
 
 		$data = array(
 			'section' => 'pages',

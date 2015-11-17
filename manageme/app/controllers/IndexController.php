@@ -9,19 +9,17 @@ class IndexController extends BaseController {
 		return View::make('home/index', $data);
 	}
 
-	public function note ($uid) {
-		$notes = Note::where('uid', '=', $uid)->get();
-		if (Settings::get('route.permalink') == 'permalink') {
-			$notes = Note::where('permalink', '=', $uid)->get();
-		}
+	public function schedule () {
+		$carbon = new Carbon;
+		$schedules = Schedule::where('date', '>', $carbon)->paginate(24);
 
-		$note = $notes[0];
-		$data = array (
-			'title' => $note->title,
-			'section' => 'note',
-			'note' => $note
+		$data = array(
+			'title' => 'Schedule',
+			'section' => 'schedules',
+			'schedules' => $schedules,
+			'carbon' => $carbon
 		);
-		return View::make('home/note', $data);
+		return View::make('home/schedule', $data);
 	}
 
 	public function page ($uid) {

@@ -55,8 +55,8 @@
 					<li><a href="#">Brands</a></li>
 					<li><a href="#">Products</a></li>
 					<li><a href="#">Showrooms</a></li>
-					<li><a href="#">Show schedule</a></li>
-					<li><a href="#">Contact us</a></li>
+					<li><a href="{{route('page.schedule')}}">Show schedule</a></li>
+					<li><a href="{{URL::asset('/page/contacto')}}">Contact us</a></li>
 				</ul>
 			</div>
 		</div>

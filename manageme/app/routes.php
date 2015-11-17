@@ -23,7 +23,7 @@ Route::get('/', array('as' => 'app.index', 'uses' => 'AppController@index'));
 Public
 /**/
 Route::get('home', array('as' => 'page.home', 'uses' => 'IndexController@index'));
-Route::get('note/{uid}', array('as' => 'page.note', 'uses' => 'IndexController@note'));
+Route::get('schedule', array('as' => 'page.schedule', 'uses' => 'IndexController@schedule'));
 Route::get('page/{uid}', array('as' => 'page.page', 'uses' => 'IndexController@page'));
 
 // Errors
@@ -79,6 +79,15 @@ Route::group(array('before' => 'auth', 'prefix' => 'appanel'), function() {
 	Route::get('notes/{id}/destroy', array('as' => 'appanel.notes.destroy', 'uses' => 'NoteController@destroy'));
 	Route::get('notes/{id}/mark', array('as' => 'appanel.notes.mark', 'uses' => 'NoteController@mark'));
 	Route::get('notes/{id}/umark', array('as' => 'appanel.notes.umark', 'uses' => 'NoteController@umark'));
+
+	// Schedules
+	Route::get('schedules', array('as' => 'appanel.schedules.index', 'uses' => 'ScheduleController@index'));
+	Route::get('schedules/create', array('as' => 'appanel.schedules.create', 'uses' => 'ScheduleController@create'));
+	Route::post('schedules/store', array('as' => 'appanel.schedules.store', 'uses' => 'ScheduleController@store'));
+	Route::get('schedules/{id}/view', array('as' => 'appanel.schedules.view', 'uses' => 'ScheduleController@view'));
+	Route::get('schedules/{id}/edit', array('as' => 'appanel.schedules.edit', 'uses' => 'ScheduleController@edit'));
+	Route::put('schedules/{id}/update', array('as' => 'appanel.schedules.update', 'uses' => 'ScheduleController@update'));
+	Route::get('schedules/{id}/destroy', array('as' => 'appanel.schedules.destroy', 'uses' => 'ScheduleController@destroy'));
 
 	// Fragments
 	Route::get('fragments', array('as' => 'appanel.fragments.index', 'uses' => 'FragmentController@index'));

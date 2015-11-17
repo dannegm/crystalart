@@ -71,18 +71,36 @@
 									<span class="sidebar-mini-hide">Páginas</span>
 								</a>
 							</li>
+							<!--
 							<li>
 								<a{{$section=='notes'?' class="active"':''}} href="{{route('appanel.notes.index')}}">
 									<i class="si si-notebook"></i>
 									<span class="sidebar-mini-hide">Notas</span>
 								</a>
 							</li>
+							-->
+							<li>
+								<a{{$section=='schedules'?' class="active"':''}} href="{{route('appanel.schedules.index')}}">
+									<i class="si si-calendar"></i>
+									<span class="sidebar-mini-hide">Schedules</span>
+								</a>
+							</li>
+							<li>
+								<a{{$section=='showrooms'?' class="active"':''}} href="{{route('appanel.notes.index')}}">
+									<i class="si si-briefcase"></i>
+									<span class="sidebar-mini-hide">Showrooms</span>
+								</a>
+							</li>
+
+							<!--
 							<li>
 								<a{{$section=='categories'?' class="active"':''}} href="{{route('appanel.categories.index')}}">
 									<i class="si si-grid"></i>
 									<span class="sidebar-mini-hide">Categorias</span>
 								</a>
 							</li>
+							-->
+
 							<li>
 								<a{{$section=='fragments'?' class="active"':''}} href="{{route('appanel.fragments.index')}}">
 									<i class="si si-puzzle"></i>
@@ -95,6 +113,12 @@
 								<a{{$section=='pictures'?' class="active"':''}} href="{{route('appanel.picture.index')}}">
 									<i class="si si-picture"></i>
 									<span class="sidebar-mini-hide">Imágenes</span>
+								</a>
+							</li>
+							<li>
+								<a{{$section=='downloads'?' class="active"':''}} href="{{route('appanel.picture.index')}}">
+									<i class="si si-docs"></i>
+									<span class="sidebar-mini-hide">Descargas</span>
 								</a>
 							</li>
 
