@@ -51,10 +51,10 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="{{route('page.home')}}">Home</a></li>
-					<li><a href="#">About us</a></li>
+					<li><a href="{{URL::asset('/page/about-us')}}">About us</a></li>
 					<li><a href="#">Brands</a></li>
 					<li><a href="#">Products</a></li>
-					<li><a href="#">Showrooms</a></li>
+					<li><a href="{{route('page.showrooms')}}">Showrooms</a></li>
 					<li><a href="{{route('page.schedule')}}">Show schedule</a></li>
 					<li><a href="{{URL::asset('/page/contacto')}}">Contact us</a></li>
 				</ul>

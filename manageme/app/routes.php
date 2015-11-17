@@ -24,6 +24,7 @@ Public
 /**/
 Route::get('home', array('as' => 'page.home', 'uses' => 'IndexController@index'));
 Route::get('schedule', array('as' => 'page.schedule', 'uses' => 'IndexController@schedule'));
+Route::get('showrooms', array('as' => 'page.showrooms', 'uses' => 'IndexController@showrooms'));
 Route::get('page/{uid}', array('as' => 'page.page', 'uses' => 'IndexController@page'));
 
 // Errors
@@ -88,6 +89,15 @@ Route::group(array('before' => 'auth', 'prefix' => 'appanel'), function() {
 	Route::get('schedules/{id}/edit', array('as' => 'appanel.schedules.edit', 'uses' => 'ScheduleController@edit'));
 	Route::put('schedules/{id}/update', array('as' => 'appanel.schedules.update', 'uses' => 'ScheduleController@update'));
 	Route::get('schedules/{id}/destroy', array('as' => 'appanel.schedules.destroy', 'uses' => 'ScheduleController@destroy'));
+
+	// Showrooms
+	Route::get('showrooms', array('as' => 'appanel.showrooms.index', 'uses' => 'ShowroomController@index'));
+	Route::get('showrooms/create', array('as' => 'appanel.showrooms.create', 'uses' => 'ShowroomController@create'));
+	Route::post('showrooms/store', array('as' => 'appanel.showrooms.store', 'uses' => 'ShowroomController@store'));
+	Route::get('showrooms/{id}/view', array('as' => 'appanel.showrooms.view', 'uses' => 'ShowroomController@view'));
+	Route::get('showrooms/{id}/edit', array('as' => 'appanel.showrooms.edit', 'uses' => 'ShowroomController@edit'));
+	Route::put('showrooms/{id}/update', array('as' => 'appanel.showrooms.update', 'uses' => 'ShowroomController@update'));
+	Route::get('showrooms/{id}/destroy', array('as' => 'appanel.showrooms.destroy', 'uses' => 'ShowroomController@destroy'));
 
 	// Fragments
 	Route::get('fragments', array('as' => 'appanel.fragments.index', 'uses' => 'FragmentController@index'));

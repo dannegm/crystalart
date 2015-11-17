@@ -86,7 +86,7 @@
 								</a>
 							</li>
 							<li>
-								<a{{$section=='showrooms'?' class="active"':''}} href="{{route('appanel.notes.index')}}">
+								<a{{$section=='showrooms'?' class="active"':''}} href="{{route('appanel.showrooms.index')}}">
 									<i class="si si-briefcase"></i>
 									<span class="sidebar-mini-hide">Showrooms</span>
 								</a>

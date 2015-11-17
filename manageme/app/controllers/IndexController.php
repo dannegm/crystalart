@@ -22,6 +22,19 @@ class IndexController extends BaseController {
 		return View::make('home/schedule', $data);
 	}
 
+	public function showrooms () {
+		$carbon = new Carbon;
+		$showrooms = Showroom::where('date', '>', $carbon)->paginate(24);
+
+		$data = array(
+			'title' => 'Showrooms',
+			'section' => 'showrooms',
+			'showrooms' => $showrooms,
+			'carbon' => $carbon
+		);
+		return View::make('home/showrooms', $data);
+	}
+
 	public function page ($uid) {
 		$page = Page::where('uid', '=', $uid)->get();
 		if (Settings::get('route.permalink') == 'permalink') {
